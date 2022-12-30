@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String number;
                 number = result.getContents();
 
-                if (number.matches("^[0-9,+]*$") && number.length() > 11) {
+                if (number.matches("^[0-9,+]*$") && number.length() > 10) {
                     Intent callIntent = new Intent(Intent.ACTION_DIAL);
                     Intent dialIntent = new Intent(Intent.ACTION_CALL);
                     dialIntent.setData(Uri.parse("tel:" + number));
@@ -108,9 +108,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String uriMaps = result.getContents();
                 String maps = "http://maps.google.com/maps?q=loc:" + uriMaps;
+                String testDoubleData1 = ",";
                 String testDoubleData2 = ".";
 
-                boolean b = uriMaps.contains(testDoubleData2);
+                boolean b = uriMaps.contains(testDoubleData1) && uriMaps.contains(testDoubleData2);
                 if (b) {
                     Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(maps));
                     mapsIntent.setPackage("com.google.android.apps.maps");
