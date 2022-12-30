@@ -108,10 +108,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String uriMaps = result.getContents();
                 String maps = "http://maps.google.com/maps?q=loc:" + uriMaps;
-                String testDoubleData1 = ",";
                 String testDoubleData2 = ".";
 
-                boolean b = uriMaps.contains(testDoubleData1) && uriMaps.contains(testDoubleData2);
+                boolean b = uriMaps.contains(testDoubleData2);
                 if (b) {
                     Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(maps));
                     mapsIntent.setPackage("com.google.android.apps.maps");
