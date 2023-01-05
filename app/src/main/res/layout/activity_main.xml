@@ -111,19 +111,19 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            android:layout_width="248dp"
-            android:layout_height="131dp"
+            android:layout_width="245dp"
+            android:layout_height="221dp"
             android:layout_marginTop="469dp"
-            android:layout_marginBottom="150dp"
+            android:layout_marginBottom="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/relativeLayout"
-            app:layout_constraintVertical_bias="0.86">
+            app:layout_constraintVertical_bias="0.19999999">
 
             <TableLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="247dp"
+                android:layout_height="232dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -132,8 +132,8 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="282dp"
+                    android:layout_height="147dp">
 
                     <ImageButton
                         android:id="@+id/imageButtonWeb"
@@ -154,6 +154,31 @@
                         android:contentDescription="@string/app_name"
                         android:onClick="telp"
                         app:srcCompat="@drawable/phone1" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="282dp"
+                    android:layout_height="147dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonMaps"
+                        style="@android:style/Widget.ImageButton"
+                        android:layout_width="123dp"
+                        android:layout_height="118dp"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="maps"
+                        android:textAlignment="center"
+                        app:srcCompat="@drawable/maps_and_flags1" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonEmail"
+                        style="@android:style/Widget.ImageButton"
+                        android:layout_width="123dp"
+                        android:layout_height="118dp"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="email"
+                        app:srcCompat="@drawable/email1" />
 
                 </TableRow>
 

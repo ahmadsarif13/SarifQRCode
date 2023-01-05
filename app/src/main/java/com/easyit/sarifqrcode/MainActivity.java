@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //View Objects
         ImageButton imageButtonWeb = (ImageButton) findViewById(R.id.imageButtonWeb);
         ImageButton imageButtonTelp = (ImageButton) findViewById(R.id.imageButtonTelp);
-        //imageButtonEmail = (ImageButton) findViewById(R.id.imageButtonEmail);
-        //imageButtonMaps = (ImageButton) findViewById(R.id.imageButttonMaps);
+        ImageButton imageButtonEmail = (ImageButton) findViewById(R.id.imageButtonEmail);
+        ImageButton imageButtonMaps = (ImageButton) findViewById(R.id.imageButtonMaps);
         Button buttonScan = (Button) findViewById(R.id.buttonScan);
         textViewNama = (TextView) findViewById(R.id.textViewNama);
         textViewKelas = (TextView) findViewById(R.id.textViewKelas);
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonScan.setOnClickListener(this);
         imageButtonWeb.setOnClickListener(this);
         imageButtonTelp.setOnClickListener(this);
-        //imageButtonEmail.setOnClickListener(this);
-        //imageButtonMaps.setOnClickListener(this);
+        imageButtonEmail.setOnClickListener(this);
+        imageButtonMaps.setOnClickListener(this);
     }
     //Logika untuk mendapatkan hasil scanning
 
@@ -117,9 +117,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mapsIntent.setPackage("com.google.android.apps.maps");
                     startActivity(mapsIntent);
                 }
-
-
-
                 try {
                 //Perintah Konversi Data Scan ke JSON
                     JSONObject obj = new JSONObject(result.getContents());
